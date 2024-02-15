@@ -1,3 +1,4 @@
+/* Body Styles */
 body {
   font-family: 'Actor', sans-serif;
   background-color: black;
@@ -7,45 +8,64 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  height: 100vh;
 }
 
+/* Container Styles */
 .container {
-  width: 80%; /* Adjust the width based on your preference */
-  margin: auto; /* Center the container horizontally */
+  width: 80%;
+  text-align: center; /* Center the content within the container */
 }
 
+/* Form Styles */
 form {
   background-color: black;
   padding: 20px;
   border-radius: 10px;
-  text-align: center; /* Center the text content within the form */
 }
 
+/* Form Group Styles with Increased Spacing */
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 30px; /* Increased margin-bottom for more spacing between form groups */
 }
 
+/* Form Control Styles */
 .form-control {
   border-radius: 5px;
   width: 100%;
-  padding: 8px; /* Add padding for better spacing */
-  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  padding: 8px;
+  box-sizing: border-box;
+  margin-top: 5px; /* Add a bit of space at the top of each input */
 }
 
+/* Align Labels and Inputs */
+label {
+  display: inline-block;
+  width: 150px; /* Adjust the width based on your design */
+  text-align: left; /* Align text to the left for better readability */
+  margin-bottom: 5px; /* Add a bit of space below each label */
+}
+
+/* Table Styles */
 .table th,
 .table td {
   text-align: center;
 }
 
+/* Button Styles with Smaller Size */
 .btn {
-  border-radius: 5px;
+  border-radius: 10px; /* Increase border radius for rounded corners */
   background-color: #C4E61E;
   border-color: #C4E61E;
   color: black;
   cursor: pointer;
+  width: 100%;
+  padding: 10px; /* Decrease padding for a smaller button */
+  font-size: 14px; /* Decrease font size for a smaller button */
+  margin-bottom: 15px; /* Increased margin between buttons */
 }
 
+/* Button Variants Styles */
 .btn-danger,
 .btn-info,
 .btn-success,
