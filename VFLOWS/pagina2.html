@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Actor:wght@400;700&display=swap" rel="stylesheet">
+
+  <title>Formulário de Produtos</title>
+
+</head>
+<body>
+
+  <div class="container mt-5">
+    <form>
+      <div class="form-group">
+        <h2>Tabela de Produtos</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Descrição</th>
+              <th>Unidade de Medida</th>
+              <th>Quantidade em Estoque</th>
+              <th>Valor Unitário</th>
+              <th>Valor Total</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><input type="text" class="form-control" name="descricao[]" required></td>
+              <td><input type="text" class="form-control" name="unidadeMedida[]" required></td>
+              <td><input type="number" class="form-control" name="quantidadeEstoque[]" required></td>
+              <td><input type="number" class="form-control" name="valorUnitario[]" required></td>
+              <td><input type="text" class="form-control" name="valorTotal[]" readonly></td>
+              <td>
+                <button type="button" class="btn btn-danger" onclick="this.parentNode.parentNode.remove()">Excluir</button> 
+                
+                <button type="button" class="btn btn-info" onclick="console.log('Visualizando documento')">Visualizar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <button type="button" class="btn btn-success" onclick="adicionarLinha()">Adicionar Produto</button>
+      </div>
+
+      <div class="form-group">
+        <label for="anexo">Anexo</label>
+        <input type="file" class="form-control-file" id="anexo" name="anexo" required>
+      </div>
+
+      <button type="button" class="btn btn-primary" onclick="console.log('Cadastro salvo!')">Salvar Fornecedor</button>
+    </form>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    function adicionarLinha() {
+      const tabela = document.querySelector('tbody');
+      const ultimaLinha = tabela.lastElementChild.cloneNode(true);
+      tabela.appendChild(ultimaLinha);
+    }
+  </script>
+</body>
+</html>

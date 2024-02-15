@@ -1,0 +1,56 @@
+body {
+  font-family: 'Actor', sans-serif;
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  width: 80%; /* Adjust the width based on your preference */
+  margin: auto; /* Center the container horizontally */
+}
+
+form {
+  background-color: black;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center; /* Center the text content within the form */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  border-radius: 5px;
+  width: 100%;
+  padding: 8px; /* Add padding for better spacing */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.table th,
+.table td {
+  text-align: center;
+}
+
+.btn {
+  border-radius: 5px;
+  background-color: #C4E61E;
+  border-color: #C4E61E;
+  color: black;
+  cursor: pointer;
+}
+
+.btn-danger,
+.btn-info,
+.btn-success,
+.btn-primary {
+  background-color: #C4E61E;
+  border-color: #C4E61E;
+  color: black;
+}
